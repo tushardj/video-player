@@ -8,17 +8,17 @@ const port = 3000;
 
 const app = express();
 
-app.use( express.static( path.join( __dirname, 'dist') ) );
+app.use(express.static(path.join(__dirname, 'dist/Video-player')));
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use('/api', api);
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/video-player/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/Video-player/index.html'));
 });
 
-app.listen(port, function(){
-    console.log( "Server runing on localhost:" + port);
+app.listen(port, function() {
+    console.log("Server runing on localhost:" + port);
 })

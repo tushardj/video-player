@@ -58,7 +58,6 @@ router.post('/videos', function(req, res) {
 });
 //update video
 router.put('/video/:id', function(req, res) {
-    console.log(req.params.id);
     Video.findByIdAndUpdate(req.params.id, {
             $set: { title: req.body.title, url: req.body.url, description: req.body.description }
         }, { new: true },

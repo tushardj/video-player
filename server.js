@@ -4,7 +4,8 @@ const path = require('path');
 
 const api = require('./server/routes/api');
 
-const port = 3000;
+const port = process.env.PORT || 8080 || 5000;
+// const port = 3000;
 
 const app = express();
 

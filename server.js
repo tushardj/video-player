@@ -4,8 +4,12 @@ const path = require('path');
 
 const api = require('./server/routes/api');
 
+<<<<<<< HEAD
 const port = process.env.PORT || 8080 || 5000;
 // const port = 3000;
+=======
+const port = process.env.PORT || 8080;
+>>>>>>> 782c6cf7e4dab2e38e7637ece2688b2d88c728f9
 
 const app = express();
 
